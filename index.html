@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-mqJFAAO1FxZ5D1CuSKFfrjFJFeZ7dwpZfZh2ME/D5LjknHZSTF5P3q7UD1RjZ1VCYlZ3xUdAqNaXz2d1lQ0W8Q==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500&display=swap" rel="stylesheet">
+    <title>Wenasss</title>
+</head>
+<body>
+
+    
+</br>
+<div id="cronometro">
+  <h3>Tiempo restante: <span id="tiempo">--:--:--</span></h3>
+</div>
+    <div id="container-form">
+      <div class="container-form-inner">
+        <form id="cartillaForm">
+          <div class="opciones-generales">
+              <div class="cartilla-opcion-1" onclick="mostrarSiguienteCartilla('lejos')">
+                <div class="container-cartilla-opcion-1">
+                  <div class="imagen-opcion">
+                    <img src="./static/chosicano.jpg" alt="" width="400px" 
+                    height="250px">
+                  </div>
+                  <h1>Viaje interprovincial</h1>
+                </div>
+              </div>
+              <div class="cartilla-opcion-2" onclick="mostrarSiguienteCartilla('medianamente_lejos')">
+                <div class="container-cartilla-opcion-2">
+                  <div class="imagen-opcion">
+                    <img src="./static/corredor.jpeg" alt="" width="400px" height="250px">
+                  </div>
+                  <h1>Sale su corredor</h1>
+                </div>
+              </div>
+              <div class="cartilla-opcion-3" onclick="mostrarSiguienteCartilla('cerca')">
+                <div class="container-cartilla-opcion-2">
+                  <div class="imagen-opcion">
+                    <img src="./static/latear.jfif" alt="" width="400px" height="250px">
+                  </div>
+                  <h1>Akisito noma</h1>
+                </div>
+              </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <div id="cartillasSiguientes" style="display: none;">
+      <span class="retroceder" onclick="retroceder()" style="cursor: pointer; display: inline-block;">
+        <img src="./static/icono-retroceder.png" alt="Retroceder" style="width: 100%; height: 100%;">
+      </span> 
+
+      <div id="cartillaLejos" style="display: none;">
+        <div class="contenedor-cartillas-lugares">
+            <div class="cartilla-lugares"  >  
+                <div class="imagen-lugar">
+                    <img src="./static/casita-aquelarre.jpg" alt="" width="300px">
+                </div>
+                <div class="informacion-lugar">
+                    <div class="titulo">
+                      <h1>Lonchecito en Casita Aquelarre</h1>
+                    </div>
+                    <div class="redes">
+                      <div class="instagram" >
+                        <a href="https://www.instagram.com/aquelarre_casita/" target="_blank">
+                          <div class="instagram-inner">
+                            <img src="./static/instagram.png" alt="">
+                            <h3>Instagram</h3>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="google-maps">
+                        <div class="google-maps-inner">
+                          <a href="https://maps.app.goo.gl/3eVVo8PPCw5peYjQ6" target="_blank">
+                            <img src="./static/maps.png" alt="">
+                            <h3>Dirección</h3>
+                          </a>
+                        </div>   
+                      </div>
+                  </div>
+                    <div class="descripcion">
+                      <h3>Tematica</h3>
+                      <p>Tarot</p>
+                      <h3>Descripción General</h3>
+                      <p>Siento que este lugar te va encantar por el hecho de la tematica que tiene,
+                          la luz es muy cálida y LOS POSTRES SON RIQUÍSIMOS.
+                      </p>
+                    </div>
+                </div>
+              </div>
+              <div class="cartilla-lugares"  >  
+                <div class="imagen-lugar">
+                  <img src="./static/lima-de-noche_orig (1).jpg" alt="">
+                </div>
+                <div class="informacion-lugar">
+                    <div class="titulo">
+                      <h1>Pasear por las calles bohemias del Centro de Lima</h1>
+                    </div>
+                    <div class="redes">
+                      <div class="google-maps">
+                        <div class="google-maps-inner">
+                          <a href="https://maps.app.goo.gl/3eVVo8PPCw5peYjQ6" target="_blank">
+                            <img src="./static/maps.png" alt="">
+                            <h3>Dirección</h3>
+                          </a>     
+                      </div>
+                      </div>
+                  </div>
+                    <div class="descripcion">
+                      <h3>Tematica:</h3>
+                      <p>Pasearrrrrrrrrrr</p>
+                      <h3>Descripción General:</h3>
+                      <p>La descripción será sentirnxs como rockerxs bohemixs
+                         y disfrutar de la noche limeña.
+                      </p>
+                    </div>
+                </div>
+              </div>
+              <div class="cartilla-lugares"  >  
+                <div class="imagen-lugar">
+                    <img src="./static/pizza-palace.jpg" alt="">
+                </div>
+                <div class="informacion-lugar">
+                    <div class="titulo">
+                      <h1>Comer pizzita en Pizza Palace</h1>
+                    </div>
+                    <div class="redes">
+                      <div class="instagram" >
+                        <div class="instagram-inner">
+                          <a href="https://www.instagram.com/pizzapalaceperu/" target="_blank">
+                            <img src="./static/instagram.png" alt="">
+                            <h3>Instagram</h3>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="google-maps">
+                        <div class="google-maps-inner">
+                          <a href="https://maps.app.goo.gl/3eVVo8PPCw5peYjQ6" target="_blank">
+                            <img src="./static/maps.png" alt="">
+                            <h3>Dirección</h3>
+                          </a>
+                        </div>
+                      </div>
+                  </div>
+                    <div class="descripcion">
+                      <h3>Tematica:</h3>
+                      <p>Comerrrrrrrrrrrrrrrrrrrrrrr</p>
+                      <h3>Descripción General:</h3>
+                      <p>Amo mucho este lugar, sus pizzas muy ricas aunq (maldita recesión) han subido
+                        los precios pero iwal lo valeeeeeeeeeeeeeeeee.
+    
+                      </p>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div id="cartillaMedianamenteLejos" style="display: none;">
+        <div class="contenedor-cartillas-lugares">
+          <div class="cartilla-lugares"  >  
+              <div class="imagen-lugar">
+                  <img src="./static/lima-design-week.jpeg" alt="">
+              </div>
+              <div class="informacion-lugar">
+                  <div class="titulo">
+                    <h1>Lima Design Week</h1>
+                  </div>
+                  <div class="redes">
+                    <div class="instagram" >
+                      <div class="instagram-inner">
+                        <a href="https://www.instagram.com/limadesignweek/" target="_blank">
+                          <img src="./static/instagram.png" alt="">
+                          <h3>Instagram</h3>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="google-maps">
+                      <div class="google-maps-inner">
+                        <a href="https://maps.app.goo.gl/dcwwnt45XeeEvNbn7" target="_blank"><img src="./static/maps.png" alt=""><h3>Dirección</h3></a>
+                      </div>                     
+                    </div>
+                    <div class="itinerario">
+                      <div class="itinerario-inner">
+                        <a href="https://drive.google.com/file/d/1g-4qTQo0rIvDNT0OViqgfJqCYcYbQfmX/view" target="_blank"><img src="./static/maps.png" alt=""><h3>Itinerario</h3></a>
+                      </div>                      
+                    </div>
+                </div>
+                  <div class="descripcion">
+                    <h3>Tematica</h3>
+                    <p>Homenaje a Ya yoi Kusama - Arte contemporáneo</p>
+                  </div>
+              </div>
+            </div>
+            <div class="cartilla-lugares"  >  
+              <div class="imagen-lugar">
+                <img src="./static/tacos.jpg" alt="">
+              </div>
+              <div class="informacion-lugar">
+                  <div class="titulo">
+                    <h1>Salen sus taquitos</h1>
+                  </div>
+                  <div class="redes">
+                    <div class="instagram" >
+                      <div class="instagram-inner">
+                        <a href="https://www.instagram.com/elmexicanoperu/" target="_blank">
+                          <img src="./static/instagram.png" alt="">
+                          <h3>Instagram</h3>
+                        </a>
+                      </div>                     
+                    </div>
+                    <div class="google-maps">
+                      <div class="google-maps-inner">
+                        <a href="https://maps.app.goo.gl/MZdEuDz2JYHudTt36" target="_blank"><img src="./static/maps.png" alt=""><h3>Dirección</h3></a>
+                      </div>                   
+                    </div>
+                    <div class="carta" >
+                      <div class="carta-inner">
+                        <a href="https://es.restaurantguru.com/El-Mexicano-La-Molina/menu" target="_blank"><img src="./static/instagram.png" alt=""><h3>Carta</h3></a>
+                      </div>                     
+                    </div>
+                </div>
+                  <div class="descripcion">
+                    <h3>Tematica:</h3>
+                    <p>Comida mexicana</p>
+                    <h3>Descripción:</h3>
+                    <p>Podríamos pedir barra libre, viene taquitos, enchiladas, agua de jaimaicaaaaaa</p>
+                  </div>
+              </div>
+            </div>
+            <div class="cartilla-lugares"  >  
+              <div class="imagen-lugar">
+                  <img src="./static/malecon.jpg" alt="">
+              </div>
+              <div class="informacion-lugar">
+                  <div class="titulo">
+                    <h1>Caminamos x el malecón mientras fumamos</h1>
+                  </div>
+                  <div class="redes">
+                    <div class="google-maps">
+                      <div class="google-maps-inner">
+                        <a href="https://maps.app.goo.gl/4N1ETf7fmXjBaceZA" target="_blank"><img src="./static/maps.png" alt=""><h3>Dirección</h3></a>
+                      </div>                     
+                    </div>
+                </div>
+                  <div class="descripcion">
+                    <h3>Tematica:</h3>
+                    <p>Bajar los tacosssss</p>
+                    <h3>Descripción General</h3>
+                    <p>Llevas la pipa moradita xfavorrrrrrr
+                    </p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="cartillaCerca" style="display: none;">
+        <div class="contenedor-cartillas-lugares">
+          <div class="cartilla-lugares"  >  
+              <div class="imagen-lugar">
+                  <img src="./static/supernova.jfif" alt="" width="300px">
+              </div>
+              <div class="informacion-lugar">
+                  <div class="titulo">
+                    <h1>Juegos inflablessss (q diga q si por favor)</h1>
+                  </div>
+                  <div class="redes">
+                    <div class="instagram" >
+                      <div class="instagram-inner">
+                        <a href="https://www.instagram.com/supernovape/" target="_blank">
+                          <img src="./static/instagram.png" alt="">
+                          <h3>Instagram</h3>
+                        </a>
+                      </div>                      
+                    </div>
+                    <div class="google-maps">
+                      <div class="google-maps-inner">
+                        <a href="https://maps.app.goo.gl/xtx9jzZThpBivVm27" target="_blank"><img src="./static/maps.png" alt=""><h3>Dirección</h3></a>
+                      </div>                     
+                    </div>
+                </div>
+                  <div class="descripcion">
+                    <h3>Tematica</h3>
+                    <p>Quien se cansa primero le debe al otrx lo que quiera del oxxo</p>
+                  </div>
+              </div>
+            </div>
+            <div class="cartilla-lugares"  >  
+              <div class="imagen-lugar">
+                <img src="./static/happyland.jpg" alt="">
+              </div>
+              <div class="informacion-lugar">
+                  <div class="titulo">
+                    <h1>ConeyPark o Happyland</h1>
+                  </div>
+                  <div class="redes">
+                    <div class="google-maps">
+                      <div class="google-maps-inner">
+                        <a href="https://maps.app.goo.gl/xtx9jzZThpBivVm27" target="_blank"><img src="./static/maps.png" alt=""><h3>Dirección</h3></a>
+                      </div>                      
+                    </div>
+                </div>
+                  <div class="descripcion">
+                    <h3>Tematica:</h3>
+                    <p>Sacar la cantidad mayor de tickets (se canjea un lápiz y un borrador)</p>
+                    <h3>Aclaración:</h3>
+                    <p>O son juegos inflables o happyland (la verdad no tendría problema si son los dos)</p>
+                  </div>
+              </div>
+            </div>
+            <div class="cartilla-lugares"  >  
+              <div class="imagen-lugar">
+                  <img src="./static/fridays.jpg" alt="">
+              </div>
+              <div class="informacion-lugar">
+                  <div class="titulo">
+                    <h1>Sale su Fridays</h1>
+                  </div>
+                  <div class="redes">
+                    <div class="google-maps">
+                      <div class="google-maps-inner">
+                        <a href="https://maps.app.goo.gl/NeJVpJHeeNnXFsJS9" target="_blank"><img src="./static/maps.png" alt=""><h3>Dirección</h3></a>
+                      </div>                      
+                    </div>
+                </div>
+                  <div class="descripcion">
+                    <h3>Tematica:</h3>
+                    <p>Comerrrrrrrrrrrrrrrrrrrrrrr</p>
+                    <h3>Descripción General</h3>
+                    <p>Se me ha antojado tacosssss OOOOOOOOOOOOOO aros de cebolla!!!!!!
+                    </p>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="resultado" style="display: none;">
+      <h3>Tu selección:</h3>
+      <p id="resultadoTexto"></p>
+  
+      <button onclick="retroceder()">Retroceder</button>
+    </div>
+  
+    <script>
+      
+      document.getElementById("container-form").style.display = "none";
+      var horaActual = new Date();
+
+      // Establecer la hora de inicio y la hora de finalización en formato HH:MM:SS
+      var horaInicio = "16:00:00";
+      var horaFin = "16:30:00";
+
+      // Crear objetos Date para la hora de inicio y la hora de finalización
+      var horaInicioObj = new Date(horaActual.toDateString() + " " + horaInicio);
+      var horaFinObj = new Date(horaActual.toDateString() + " " + horaFin);
+
+      // Calcular la diferencia en segundos entre la hora de inicio y la hora de finalización
+      var diferenciaSegundos = Math.floor((horaFinObj - horaInicioObj) / 1000);
+
+      // Función para actualizar y mostrar el cronómetro
+      function actualizarCronometro() {
+        // Calcular horas, minutos y segundos restantes
+        var horas = Math.floor(diferenciaSegundos / 3600);
+        var minutos = Math.floor((diferenciaSegundos % 3600) / 60);
+        var segundos = diferenciaSegundos % 60;
+
+        // Agregar ceros a la izquierda si es necesario
+        horas = horas < 10 ? "0" + horas : horas;
+        minutos = minutos < 10 ? "0" + minutos : minutos;
+        segundos = segundos < 10 ? "0" + segundos : segundos;
+
+        // Actualizar el contenido del cronómetro
+        document.getElementById("tiempo").innerText = horas + ":" + minutos + ":" + segundos;
+
+        // Verificar si el tiempo ha llegado a cero
+        if (diferenciaSegundos <= 0) {
+          // Redirigir a la pantalla principal del formulario o realizar la acción deseada
+          document.getElementById("container-form").style.display = "block";
+        } else {
+          // Reducir la diferencia en segundos y volver a verificar después de 1 segundo
+          diferenciaSegundos--;
+          setTimeout(actualizarCronometro, 1000);
+        }
+      }
+        // Iniciar el cronómetro al cargar la página
+      window.onload = function () {
+        // Iniciar el cronómetro solo si la hora actual está entre la hora de inicio y la hora de finalización
+        if (horaActual >= horaInicioObj && horaActual <= horaFinObj) {
+          actualizarCronometro();
+        } else {
+          // Si la hora actual está fuera del rango, puedes mostrar un mensaje o realizar otra acción
+          document.getElementById("tiempo").innerText = "Fuera de horario";
+        }
+      };
+      var distanciaSeleccionada;
+      function mostrarSiguienteCartilla(distancia) {
+        var cartillasSiguientes = document.getElementById("cartillasSiguientes");
+        var cartillaForm = document.getElementById("cartillaForm");
+  
+        if (distancia) {
+          distanciaSeleccionada = distancia;
+          cartillasSiguientes.style.display = "block";
+          cartillaForm.style.display = "none"; // Ocultar las cartillas originales
+  
+          // Mostrar la sección de cartillas correspondiente a la distancia seleccionada
+          if (distancia === 'lejos') {
+            document.getElementById('cartillaLejos').style.display = 'block';
+          } else if (distancia === 'medianamente_lejos') {
+            document.getElementById('cartillaMedianamenteLejos').style.display = 'block';
+          } else if (distancia === 'cerca') {
+            document.getElementById('cartillaCerca').style.display = 'block';
+          }
+        }
+      }
+  
+      function mostrarResultado(cartilla1, cartilla2, cartilla3) {
+        var resultado = document.getElementById("resultado");
+        var resultadoTexto = document.getElementById("resultadoTexto");
+  
+        if (cartilla1 && cartilla2 && cartilla3) {
+          resultadoTexto.textContent = "Estás " + distanciaSeleccionada + " y has seleccionado las cartillas " + cartilla1 + ", " + cartilla2 + " y " + cartilla3 + ".";
+          resultado.style.display = "block";
+        }
+      }
+  
+      function retroceder() {
+        var cartillasSiguientes = document.getElementById("cartillasSiguientes");
+        var cartillaForm = document.getElementById("cartillaForm");
+        var resultado = document.getElementById("resultado");
+  
+        if (cartillasSiguientes.style.display === "block") {
+          cartillasSiguientes.style.display = "none";
+          cartillaForm.style.display = "block";
+  
+          // Ocultar todas las secciones de cartillas específicas
+          document.getElementById('cartillaLejos').style.display = 'none';
+          document.getElementById('cartillaMedianamenteLejos').style.display = 'none';
+          document.getElementById('cartillaCerca').style.display = 'none';
+        } else if (resultado.style.display === "block") {
+          resultado.style.display = "none";
+          cartillasSiguientes.style.display = "block";
+        }
+      }
+      
+    </script>
+  
+  </body>
+</html>

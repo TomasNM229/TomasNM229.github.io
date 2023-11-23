@@ -1,0 +1,221 @@
+*{
+    font-family: 'Fira Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: #fff;
+    text-align: center;
+}
+img{
+    border-radius: 10px;
+}
+label{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+}
+body{
+    background-color: #E5CFF7;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+.container-form{
+    margin-top: 200px;
+}
+.opciones-generales{
+    display: flex;
+    justify-content: space-evenly;
+    .cartilla-opcion-1, .cartilla-opcion-2, .cartilla-opcion-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 600px;
+        height: 400px;
+        border-radius: 5px;
+        background-color: rgba(113, 58, 190, 0.8);
+        .imagen-opcion{
+            width: fit-content;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.opciones-generales .cartilla-opcion-1{
+    transition: all .3s ease-in-out;
+}
+.opciones-generales .cartilla-opcion-1:hover{
+    transform: scale(1.05);
+}
+.opciones-generales .cartilla-opcion-2{
+    transition: all .3s ease-in-out;
+}
+.opciones-generales .cartilla-opcion-2:hover{
+    transform: scale(1.05);
+}
+.opciones-generales .cartilla-opcion-3{
+    transition: all .3s ease-in-out;
+}
+.opciones-generales .cartilla-opcion-3:hover{
+    transform: scale(1.05);
+}
+.contenedor-cartillas-lugares{
+    display: flex;
+    justify-content: space-evenly;
+    .cartilla-lugares{
+        width: 500px;
+        height: fit-content;
+        background-color: #5B0888;
+        border-radius: 5px;
+        .imagen-lugar{
+            width: fit-content;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+        .informacion-lugar{
+            border-radius: 10px;
+            .titulo{
+                padding: 35px;
+            }
+            .descripcion{
+                background-color: #fff;
+                padding: 20px;
+            }
+        }
+
+    }
+}
+.imagen-lugar img{
+    width: 500px;
+    height: 300px;
+}
+.redes{
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    margin-bottom: 30px;
+    .instagram, .google-maps, .itinerario, .carta{
+        width: 100px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 5px;
+    }
+}
+.redes .instagram .instagram-inner{
+    text-align: center;
+}
+.redes .google-maps .google-maps-inner{
+    text-align: center;
+}
+.redes .itinerario .itinerario-inner{
+    text-align: center;
+}
+.redes .carta .carta-inner{
+    text-align: center;
+}
+.redes .instagram{
+    transition: all .3s ease-in-out;
+}
+.redes .instagram:hover{
+    transform: scale(1.03);
+}
+.redes .google-maps{
+    transition: all .3s ease-in-out;
+}
+.redes .google-maps:hover{
+    transform: scale(1.03);
+}
+.redes .itinerario{
+    transition: all .3s ease-in-out;
+}
+.redes .itinerario:hover{
+    transform: scale(1.03);
+}
+.redes .carta{
+    transition: all .3s ease-in-out;
+}
+.redes .carta:hover{
+    transform: scale(1.03);
+}
+.informacion-lugar .descripcion h3, p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.redes .descripcion p{
+    text-align: center;
+}
+.redes img{
+    width: 45px;
+}
+.cartilla-lugares h1{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.redes a{
+    text-decoration: none;
+    color: black;
+}
+.retroceder{
+    margin-left: 100px;
+}
+.retroceder:hover,
+.retroceder:focus {
+  -webkit-animation-name: vibrate;
+  -webkit-animation-duration: 0.8s;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes vibrate {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Aplicar la animación a la clase 'cartilla-lugares' */
+.cartilla-lugares {
+    animation: fadeIn 1s ease-in-out; /* Puedes ajustar la duración y la función de temporización según tus preferencias */
+}
