@@ -14,10 +14,8 @@
 
     
 </br>
-<div id="cronometro">
-  <h3>Tiempo restante: <span id="tiempo">--:--:--</span></h3>
-</div>
-    <div id="container-form">
+    
+    <div class="container-form">
       <div class="container-form-inner">
         <form id="cartillaForm">
           <div class="opciones-generales">
@@ -350,55 +348,6 @@
   
     <script>
       
-      document.getElementById("container-form").style.display = "none";
-      var horaActual = new Date();
-
-      // Establecer la hora de inicio y la hora de finalización en formato HH:MM:SS
-      var horaInicio = "16:00:00";
-      var horaFin = "16:30:00";
-
-      // Crear objetos Date para la hora de inicio y la hora de finalización
-      var horaInicioObj = new Date(horaActual.toDateString() + " " + horaInicio);
-      var horaFinObj = new Date(horaActual.toDateString() + " " + horaFin);
-
-      // Calcular la diferencia en segundos entre la hora de inicio y la hora de finalización
-      var diferenciaSegundos = Math.floor((horaFinObj - horaInicioObj) / 1000);
-
-      // Función para actualizar y mostrar el cronómetro
-      function actualizarCronometro() {
-        // Calcular horas, minutos y segundos restantes
-        var horas = Math.floor(diferenciaSegundos / 3600);
-        var minutos = Math.floor((diferenciaSegundos % 3600) / 60);
-        var segundos = diferenciaSegundos % 60;
-
-        // Agregar ceros a la izquierda si es necesario
-        horas = horas < 10 ? "0" + horas : horas;
-        minutos = minutos < 10 ? "0" + minutos : minutos;
-        segundos = segundos < 10 ? "0" + segundos : segundos;
-
-        // Actualizar el contenido del cronómetro
-        document.getElementById("tiempo").innerText = horas + ":" + minutos + ":" + segundos;
-
-        // Verificar si el tiempo ha llegado a cero
-        if (diferenciaSegundos <= 0) {
-          // Redirigir a la pantalla principal del formulario o realizar la acción deseada
-          document.getElementById("container-form").style.display = "block";
-        } else {
-          // Reducir la diferencia en segundos y volver a verificar después de 1 segundo
-          diferenciaSegundos--;
-          setTimeout(actualizarCronometro, 1000);
-        }
-      }
-        // Iniciar el cronómetro al cargar la página
-      window.onload = function () {
-        // Iniciar el cronómetro solo si la hora actual está entre la hora de inicio y la hora de finalización
-        if (horaActual >= horaInicioObj && horaActual <= horaFinObj) {
-          actualizarCronometro();
-        } else {
-          // Si la hora actual está fuera del rango, puedes mostrar un mensaje o realizar otra acción
-          document.getElementById("tiempo").innerText = "Fuera de horario";
-        }
-      };
       var distanciaSeleccionada;
       function mostrarSiguienteCartilla(distancia) {
         var cartillasSiguientes = document.getElementById("cartillasSiguientes");
